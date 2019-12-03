@@ -65,7 +65,8 @@ body {
     }
   }
 
-  &:hover .c-dropdown__content {
+  &:hover .c-dropdown__content,
+  &__content.is-visible {
     display: block;
   }
 }
