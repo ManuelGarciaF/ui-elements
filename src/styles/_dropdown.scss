@@ -1,0 +1,47 @@
+$secondary-background: #263b50;
+
+.c-dropdown {
+  display: inline-block;
+
+  padding: 0.5rem 1rem;
+
+  &__title {
+    font-size: 1.75rem;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+    user-select: none;
+  }
+  &__content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+
+    width: 100%;
+    left: 0;
+
+    padding: 0.5rem;
+
+    list-style-type: none;
+    font-size: 1.25rem;
+
+    background-color: $secondary-background;
+  }
+  &__item {
+    cursor: pointer;
+    text-align: center;
+
+    a {
+      color: #ffffffd7;
+      text-decoration: none;
+    }
+  }
+  &.is-selected {
+    background-color: $secondary-background;
+
+    .c-dropdown__content {
+      display: block;
+    }
+  }
+}
