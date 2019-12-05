@@ -1,0 +1,90 @@
+$secondary-background: #263b50;
+
+$image-width: 80vw;
+
+.c-image-slider {
+  position: relative;
+
+  width: $image-width;
+  height: 60vw;
+
+  border: 10px $secondary-background solid;
+  box-shadow: 6px 6px 8px rgba($color: #000000, $alpha: 0.2);
+
+  overflow: hidden;
+
+  &__button {
+    border: none;
+
+    width: 2rem;
+    height: 2rem;
+
+    position: absolute;
+
+    top: 50%;
+
+    background-color: #ffffff;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  &__button--previous {
+    left: 0.5rem;
+
+    background-image: url('../svg/chevron_left-24px.svg');
+  }
+  &__button--next {
+    right: 0.5rem;
+
+    background-image: url('../svg/chevron_right-24px.svg');
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: row;
+
+    transition: transform 300ms ease-in-out;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+  }
+  &__image {
+    height: 100%;
+    width: $image-width;
+  }
+
+  &__nav-dots {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-bottom: 0.5rem;
+
+    z-index: 2;
+  }
+
+  &__nav-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+
+    margin: 0 0.1rem;
+
+    border-radius: 50%;
+    background-color: #9b9b9b;
+
+    &.is-selected {
+      background-color: #ffffff;
+    }
+  }
+}
