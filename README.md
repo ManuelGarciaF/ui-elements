@@ -22,9 +22,7 @@
 
 ```html
 <div class="c-image-slider">
-  <button
-    class="c-image-slider__button c-image-slider__button--previous"
-  ></button>
+  <button class="c-image-slider__button c-image-slider__button--previous"></button>
   <button class="c-image-slider__button c-image-slider__button--next"></button>
   <div class="c-image-slider__nav-dots"></div>
   <div class="c-image-slider__images">
