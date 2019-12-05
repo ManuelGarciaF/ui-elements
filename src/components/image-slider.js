@@ -56,14 +56,16 @@ document.querySelectorAll('.c-image-slider').forEach((slider) => {
     });
   });
 
-  dotsDiv.addEventListener('click', (event) => {
-    const index = event.target.getAttribute('data-index');
+  slider
+    .querySelector('.c-image-slider__nav-dots')
+    .addEventListener('click', (event) => {
+      const index = event.target.getAttribute('data-index');
 
-    // Make sure click was on a dot and not on the container.
-    if (!index) return;
+      // Make sure click was on a dot and not on the container.
+      if (!index) return;
 
-    const imageWidth = Number(getComputedStyle(slider).width.slice(0, -2));
+      const imageWidth = Number(getComputedStyle(slider).width.slice(0, -2));
 
-    goToImageIndex(slider, imageWidth, index);
-  });
+      goToImageIndex(slider, imageWidth, index);
+    });
 });
